@@ -84,14 +84,30 @@
   }
   
   /* Footer Styling */
-  #footer {
+  /* Adding a background color animation to the footer */
+#footer {
 	background-color: #c4d5d9;
 	padding: 15px;
 	text-align: center;
 	margin-top: 20px;
 	width: 100%;
 	clear: both; /* Ensure footer clears all floats */
+	animation: footerPulse 5s infinite alternate;
   }
+  
+  /* Animation keyframes */
+  @keyframes footerPulse {
+	0% {
+	  background-color: #c4d5d9;
+	}
+	50% {
+	  background-color: #a3b8c0;
+	}
+	100% {
+	  background-color: #c4d5d9;
+	}
+  }
+  
   
   /* Clearing Floats */
   .clear {
@@ -133,6 +149,25 @@
 	  height: auto;
 	  margin: 0 auto 10px;
 	  float: none;
+	}
+  }
+  /* Hover effects for devices that support hover */
+@media (hover: hover) {
+	ul.navigation li a:hover {
+	  background-color: #000;
+	  color: #fff; /* Text color change on hover */
+	  transform: scale(1.05); /* Slight scale-up on hover for emphasis */
+	  transition: all 0.3s ease;
+	}
+  }
+  
+  /* Remove hover effects on devices that don't support hover */
+  @media (hover: none) {
+	ul.navigation li a {
+	  background-color: #4a4a4a; /* Keep the background as is for touch devices */
+	  color: #fff;
+	  text-decoration: underline; /* Use underline instead of hover effect */
+	  transform: none; /* Remove any transformation */
 	}
   }
   
