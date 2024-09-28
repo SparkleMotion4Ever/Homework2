@@ -5,78 +5,12 @@
     box-sizing: border-box;
 }
 
-/* Body Styling */
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    background: #eaf8fb;
-    color: #333;
-    line-height: 1.6;
+/* Clearfix for content */
+.content::after {
+    content: "";
+    display: table;
+    clear: both;
 }
-
-/* Header Styling */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 45px 15px 15px;
-    text-align: center;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    min-height: 130px;
-}
-
-header h1 {
-    margin-bottom: 10px;
-}
-
-header h2 {
-    margin-bottom: 20px;
-    font-weight: normal;
-}
-
-/* Navigation Styling */
-ul.navigation {
-    list-style: none;
-    margin-top: 20px;
-}
-
-ul.navigation li {
-    display: inline-block;
-    margin: 0 3px 5px;
-}
-
-ul.navigation li a {
-    background: #4a4a4a;
-    color: #fff;
-    padding: 3px 10px;
-    border-radius: 2px;
-    border: 1px solid #595959;
-    text-decoration: none;
-}
-
-ul.navigation li a:hover {
-    background-color: #000;
-}
-
-/* Desktop Layout: Content and Sidebar */
-.content {
-    margin: 15px auto;
-    width: 900px;
-}
-
-.col-right {
-    float: right;
-    width: 660px;
-}
-
-.sidebar-left {
-    float: left;
-    padding: 0 10px;
-    width: 200px;
-}
-
-
-
 
 /* Footer Styling */
 #footer {
@@ -84,63 +18,11 @@ ul.navigation li a:hover {
     padding: 15px;
     text-align: center;
     margin-top: 20px;
+    clear: both;  /* Ensure footer clears all floats */
     width: 100%;
-    clear: both; /* Ensure footer clears all floats */
 }
 
 /* Clearing Floats */
 .clear {
-    clear: both;
-}
-
-/* Float Image Styling */
-img.float-left {
-    float: left;
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-
-/* Responsive Layout for Mobile Devices */
-@media (max-width: 768px) {
-    /* Make content and sidebar stack vertically */
-    .content {
-        display: block;
-        width: 100%;
-        padding: 10px;
-    }
-
-    /* Sidebar and Main Content: Full Width on Mobile */
-    .col-right, .sidebar-left {
-        float: none;
-        width: 100%;
-    }
-
-    /* Adjust Header Font Sizes for Mobile */
-    header h1 {
-        font-size: 1.8rem;
-    }
-
-    header h2 {
-        font-size: 1.2rem;
-    }
-
-    /* Make navigation items stack vertically on smaller screens */
-    ul.navigation li {
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    /* Adjust Image Size for Mobile */
-    .col-right img {
-        width: 100%;
-        height: auto;
-        float: none;
-        margin: 0 auto 10px;
-    }
-}
-/* Clearfix for content to handle floats */
-.content::after {
-    content: "";
-    display: table;
     clear: both;
 }
