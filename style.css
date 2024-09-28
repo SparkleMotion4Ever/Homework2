@@ -100,16 +100,16 @@
 	margin-top: 20px;
 	width: 100%;
 	clear: both; /* Ensure footer clears all floats */
-	animation: footerPulse 5s infinite alternate;
+	animation: footerPulse 5s infinite alternate ease-in-out;
   }
   
-  /* Animation keyframes */
+  /* Corrected Animation keyframes */
   @keyframes footerPulse {
 	0% {
 	  background-color: #c4d5d9;
 	}
 	50% {
-	  background-color: #a3b8c0;
+	  background-color: #8fb1b5;
 	}
 	100% {
 	  background-color: #c4d5d9;
