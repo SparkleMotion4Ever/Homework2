@@ -1,179 +1,138 @@
 /* General reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body Styling */
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    background: #eaf8fb;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Header Styling */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 45px 15px 15px;
-    text-align: center;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    min-height: 130px;
-}
-
-header h1 {
-    margin-bottom: 10px;
-}
-
-header h2 {
-    margin-bottom: 20px;
-    font-weight: normal;
-}
-
-/* Navigation Styling */
-ul.navigation {
-    list-style: none;
-    margin-top: 20px;
-}
-
-ul.navigation li {
-    display: inline-block;
-    margin: 0 3px 5px;
-}
-
-ul.navigation li a {
-    background: #4a4a4a;
-    color: #fff;
-    padding: 3px 10px;
-    border-radius: 2px;
-    border: 1px solid #595959;
-    text-decoration: none;
-}
-
-ul.navigation li a:hover {
-    background-color: #000;
-}
-
-/* Content and Sidebar */
-.content {
-    margin: 15px auto;
-    width: 900px;
-}
-
-/* Sidebar Styling */
-.sidebar-left {
-    float: left;
-    padding: 0 10px;
-    width: 200px;
-}
-
-.sidebar-left ul.list {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.sidebar-left ul.list li {
-    margin-bottom: 10px;
-}
-
-.sidebar-left ul.list li a {
-    color: #0288d1;
-    text-decoration: none;
-}
-
-.sidebar-left ul.list li a:hover {
-    text-decoration: underline;
-}
-
-/* Main Content Styling */
-.col-right {
-    float: right;
-    width: 660px;
-}
-
-.col-right h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.col-right h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.col-right p {
-    margin-bottom: 15px;
-}
-
-.col-right img {
-    width: 100%;
-    max-width: 300px;
-    float: left;
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-
-/* Clearfix for content */
-.content::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Footer Styling */
-#footer {
-    background-color: #c4d5d9;
-    padding: 15px;
-    text-align: center;
-    margin-top: 20px;
-    width: 100%;
-    clear: both; /* Ensure footer clears all floats */
-}
-
-/* Clearing Floats */
-.clear {
-    clear: both;
-}
-
-/* Responsive Layout for Mobile Devices */
-@media (max-width: 768px) {
-    /* Make content and sidebar stack vertically */
-    .content {
-        display: block;
-        width: 100%;
-        padding: 10px;
-    }
-
-    /* Sidebar and Main Content: Full Width on Mobile */
-    .col-right, .sidebar-left {
-        float: none;
-        width: 100%;
-    }
-
-    /* Adjust Header Font Sizes for Mobile */
-    header h1 {
-        font-size: 1.8rem;
-    }
-
-    header h2 {
-        font-size: 1.2rem;
-    }
-
-    /* Make navigation items stack vertically on smaller screens */
-    ul.navigation li {
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    /* Adjust Image Size for Mobile */
-    .col-right img {
-        width: 100%;
-        height: auto;
-        float: none;
-        margin: 0 auto 10px;
-    }
-}
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	background: #eaf8fb;
+	color: #333;
+	line-height: 1.6;
+  }
+  
+  /* Header Styling */
+  header {
+	background-color: #333;
+	color: #fff;
+	padding: 45px 15px 15px;
+	text-align: center;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	min-height: 130px;
+  }
+  
+  header h1 {
+	margin-bottom: 10px;
+  }
+  
+  header h2 {
+	margin-bottom: 20px;
+	font-weight: normal;
+  }
+  
+  /* Navigation Styling */
+  ul.navigation {
+	list-style: none;
+	margin-top: 20px;
+	padding: 0;
+  }
+  
+  ul.navigation li {
+	display: inline-block;
+	margin: 0 5px; /* Increase spacing for navigation items */
+  }
+  
+  ul.navigation li a {
+	background: #4a4a4a;
+	color: #fff;
+	padding: 5px 15px; /* More padding for the buttons */
+	border-radius: 3px;
+	border: 1px solid #595959;
+	text-decoration: none;
+  }
+  
+  ul.navigation li a:hover {
+	background-color: #000;
+  }
+  
+  /* Content and Sidebar Layout */
+  .content {
+	display: flex;
+	justify-content: space-between;
+	margin: 15px auto;
+	width: 900px;
+  }
+  
+  .col-right {
+	width: 65%; /* Make the right column take up 65% of the space */
+  }
+  
+  .sidebar-left {
+	width: 30%; /* Make the sidebar take up 30% of the space */
+	padding-right: 20px;
+  }
+  
+  /* Image Styling in the Content */
+  .col-right img {
+	float: left;
+	margin-right: 20px;
+	max-width: 300px;
+  }
+  
+  /* Footer Styling */
+  #footer {
+	background-color: #c4d5d9;
+	padding: 15px;
+	text-align: center;
+	margin-top: 20px;
+	width: 100%;
+	clear: both; /* Ensure footer clears all floats */
+  }
+  
+  /* Clearing Floats */
+  .clear {
+	clear: both;
+  }
+  
+  /* Responsive Layout for Mobile Devices */
+  @media (max-width: 768px) {
+	/* Make content and sidebar stack vertically */
+	.content {
+	  flex-direction: column;
+	  width: 100%;
+	  padding: 10px;
+	}
+  
+	/* Sidebar and Main Content: Full Width on Mobile */
+	.col-right, .sidebar-left {
+	  width: 100%;
+	}
+  
+	/* Adjust Header Font Sizes for Mobile */
+	header h1 {
+	  font-size: 1.8rem;
+	}
+  
+	header h2 {
+	  font-size: 1.2rem;
+	}
+  
+	/* Make navigation items stack vertically on smaller screens */
+	ul.navigation li {
+	  display: block;
+	  margin-bottom: 10px;
+	}
+  
+	/* Adjust Image Size for Mobile */
+	.col-right img {
+	  width: 100%;
+	  height: auto;
+	  margin: 0 auto 10px;
+	  float: none;
+	}
+  }
+  
