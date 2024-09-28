@@ -75,6 +75,9 @@ ul.navigation li a:hover {
     width: 200px;
 }
 
+
+
+
 /* Footer Styling */
 #footer {
     background-color: #c4d5d9;
@@ -134,4 +137,10 @@ img.float-left {
         float: none;
         margin: 0 auto 10px;
     }
+}
+/* Clearfix for content to handle floats */
+.content::after {
+    content: "";
+    display: table;
+    clear: both;
 }
