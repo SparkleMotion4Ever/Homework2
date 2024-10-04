@@ -1,11 +1,11 @@
-/* General reset */
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
   }
   
-  /* Body Styling */
+
   body {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
@@ -14,7 +14,7 @@
 	line-height: 1.6;
   }
   
-  /* Header Styling */
+ 
   header {
 	background-color: #333;
 	color: #fff;
@@ -34,7 +34,7 @@
 	font-weight: normal;
   }
   
-  /* Navigation Styling */
+  
   ul.navigation {
 	list-style: none;
 	margin-top: 20px;
@@ -52,30 +52,30 @@
 	border-radius: 2px;
 	border: 1px solid #595959;
 	text-decoration: none;
-	transition: all 0.3s ease; /* Adding smooth transition */
+	transition: all 0.3s ease; 
   }
   
-  /* Hover effects for devices that support hover */
+  
   @media (hover: hover) {
 	ul.navigation li a:hover {
 	  background-color: #000;
-	  color: #fff; /* Text color change on hover */
-	  transform: scale(1.05); /* Slight scale-up on hover for emphasis */
+	  color: #fff; 
+	  transform: scale(1.05); 
 	  transition: all 0.3s ease;
 	}
   }
   
-  /* Remove hover effects on devices that don't support hover */
+  
   @media (hover: none) {
 	ul.navigation li a {
-	  background-color: #4a4a4a; /* Keep the background as is for touch devices */
+	  background-color: #4a4a4a; 
 	  color: #fff;
-	  text-decoration: underline; /* Use underline instead of hover effect */
-	  transform: none; /* Remove any transformation */
+	  text-decoration: underline;
+	  transform: none; 
 	}
   }
   
-  /* Desktop Layout: Content and Sidebar */
+  
   .content {
 	margin: 15px auto;
 	width: 900px;
@@ -92,18 +92,18 @@
 	width: 200px;
   }
   
-  /* Footer Styling */
+  
   #footer {
 	background-color: #c4d5d9;
 	padding: 15px;
 	text-align: center;
 	margin-top: 20px;
 	width: 100%;
-	clear: both; /* Ensure footer clears all floats */
-	animation: footerPulse 3s ease-in-out infinite; /* Shortened the duration and added ease */
+	clear: both; 
+	animation: footerPulse 3s ease-in-out infinite; 
   }
   
-  /* Animation keyframes */
+  
   @keyframes footerPulse {
 	0% {
 	  background-color: #c4d5d9;
@@ -116,28 +116,28 @@
 	}
   }
   
-  /* Clearing Floats */
+  
   .clear {
 	clear: both;
   }
   
-  /* Responsive Layout for Mobile Devices */
+  
   @media (max-width: 768px) {
-	/* Make content and sidebar stack vertically */
+	
 	.content {
 	  display: block;
 	  width: 100%;
 	  padding: 10px;
 	}
   
-	/* Sidebar and Main Content: Full Width on Mobile */
+	
 	.col-right,
 	.sidebar-left {
 	  float: none;
 	  width: 100%;
 	}
   
-	/* Adjust Header Font Sizes for Mobile */
+	
 	header h1 {
 	  font-size: 1.8rem;
 	}
@@ -146,13 +146,13 @@
 	  font-size: 1.2rem;
 	}
   
-	/* Make navigation items stack vertically on smaller screens */
+	
 	ul.navigation li {
 	  display: block;
 	  margin-bottom: 10px;
 	}
-  
-	/* Adjust Image Size for Mobile */
+
+	
 	.col-right img {
 	  width: 100%;
 	  height: auto;
